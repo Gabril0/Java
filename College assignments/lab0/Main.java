@@ -12,8 +12,8 @@ public class Main {
         System.out.println("1. Exercicio 1");
         System.out.println("2. Exercicio 2");
         System.out.println("3. Exercicio 3");
-        System.out.println("4. Exercicio 4");
-        System.out.println("5. Exercicio 5");
+        System.out.println("4. Exercicio 4 e 5");
+        System.out.println("5. Somente o exercicio 5");
         System.out.println("6. Exercicio 6");
         System.out.println("7. Exercicio 7");
         System.out.println("8. Exercicio 8");
@@ -25,14 +25,17 @@ public class Main {
 
         switch (op){
             case 1: e.primeiroExercicio(); break;
-            case 2: break;
+            case 2: e.segundoExercicio();break;
             case 3: e.terceiroExercicio(); break;
-            case 4: break;
-            case 5: break;
-            case 6: break;
-            case 7: break;
-            case 8: break;
-            case 9: break;
+            case 4: e.quartoExercicio();break;
+            case 5: e.quintoExercicio();break;
+            case 6: e.sextoExercicio();break;
+            case 7: e.setimoExercicio();break;
+            case 8: 
+                    System.out.println(e.calcularProximaOlimpiada());  
+                    e.pressToUnpause(); break;
+            case 9: System.out.println("Demonstracao feita por meio deste menu!!"); 
+                    e.pressToUnpause();break;
             case 0: in.close(); System.exit(1); break;
             default: break;}
         }
