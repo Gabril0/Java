@@ -79,11 +79,11 @@ public class Exercicios {
     }
 
     public void setimoExercicio(){
-        Atleta[] array = new Atleta[10];
+        Atleta[] array = new Atleta[3];
         ArrayList <Atleta> arrayList = new ArrayList<>();
-        array[1] = new Atacante("Thurston", 27, 68.9f, 2.01f);
-        array[2] = new Tenista("Thom", 36, 85.5f, 1.68f);
-        array[3] = new Corredor("Kevin", 21, 60.2f, 1.72f);
+        array[0] = new Atacante("Thurston", 27, 68.9f, 2.01f);
+        array[1] = new Tenista("Thom", 36, 85.5f, 1.68f);
+        array[2] = new Corredor("Kevin", 21, 60.2f, 1.72f);
 
         arrayList.add(new Atacante("Thurston", 27, 68.9f, 2.01f));
         arrayList.add(new Tenista("Thom", 36, 85.5f, 1.68f));
@@ -92,7 +92,7 @@ public class Exercicios {
         Collections.sort(arrayList);
         Arrays.sort(array);
         System.out.println("For array comum: ");
-        for (int i = 1; i <= 3; i++) 
+        for (int i = 0; i < 3; i++) 
         {
             array[i].aquecer(5);
             array[i].jogar();

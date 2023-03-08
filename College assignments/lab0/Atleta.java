@@ -54,9 +54,8 @@ public abstract class Atleta implements Comparable<Atleta> {
     }
 
     @Override
-    public int compareTo(Atleta o) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'compareTo'");
+    public int compareTo(Atleta atl) {
+        return this.nome.compareTo(atl.getNome());
     }
 
 }
