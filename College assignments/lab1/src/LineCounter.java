@@ -4,7 +4,7 @@ import javax.sound.sampled.Line;
 
 public class LineCounter extends Thread {
     private int i;
-    private String absolutePath = "D:\\Estudos\\Java\\Trabalhos\\ListasPOO2\\Java\\College assignments\\lab2\\src";
+    private String absolutePath = "D:\\lab2\\src";
     LineCounter(int i) {
         this.i = i;
     }
