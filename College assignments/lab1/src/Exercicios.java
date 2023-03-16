@@ -2,6 +2,8 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.ThreadPoolExecutor;
 import java.util.Scanner;
 import java.util.concurrent.TimeUnit;
+import java.io.File;
+import java.io.FileWriter;
 
 public class Exercicios {
 
