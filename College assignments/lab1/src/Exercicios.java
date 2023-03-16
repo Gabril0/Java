@@ -54,4 +54,18 @@ public class Exercicios {
         System.out.println("Digite qualquer coisa para despausar!");
         buffer = b.nextLine();// ajudando a nao dar erro de buffer
     }
+    public void criaArquivos(int numDeArquivos) {
+        String absolutePath = "D:\\Estudos\\Java\\Trabalhos\\ListasPOO2\\Java\\College assignments\\lab2\\src";
+        try {
+            for (int i = 0; i < numDeArquivos; i++) {
+                File f = new File( absolutePath + "\\arquivo" + i + ".txt");
+                FileWriter fw = new FileWriter("arquivo" + i + ".txt");
+                fw.write("a\n\naa\na\nd\nf\na\n\na\na\na\na\n");
+                fw.close();
+            }
+            pressToUnpause();
+        } catch (Exception e) {
+            throw new FileErrorException();
+        }
+    }
 }
