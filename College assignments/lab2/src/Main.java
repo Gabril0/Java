@@ -39,7 +39,7 @@ public class Main {
         Scanner in = new Scanner(System.in);
         int op;
         if (marca.getNome().compareTo("Toyota") == 0) {
-            System.out.println("Selecione um carro");
+            System.out.println("Selecione um carro:");
             System.out.println("1.Toyota 1");
             System.out.println("2.Toyota 2");
             System.out.printf("Opcao: ");
@@ -51,7 +51,7 @@ public class Main {
             }
         }
         if (marca.getNome().compareTo("Honda") == 0) {
-            System.out.println("Selecione um carro");
+            System.out.println("Selecione um carro:");
             System.out.println("1.Honda 1");
             System.out.println("2.Honda 2");
             System.out.printf("Opcao: ");
