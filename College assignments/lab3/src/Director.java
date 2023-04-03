@@ -31,6 +31,7 @@ public class Director implements Builder{
                     escolhaEquipamentos();
                     break;
                 case 5:
+                    System.out.println(hero.toString());
                     flag = true;
                     break;
                 default:
@@ -140,6 +141,40 @@ public class Director implements Builder{
         stepEquip(options[op1-1],options[op2-1]);
 
     }
+
+    public void enfrentarLorde(){
+        if(hero != null) {
+            System.out.println("Pulamos toda a historia e chegamos para a parte final, onde o heroi " + hero.getName() + " enfrenta o lorde malvado");
+            while (hero.getHealth() > 0) {
+                System.out.println(hero.getName() + " tenta conversar com o vilao");
+                if (hero.getInteligence() > 10) {
+                    System.out.println("Como era muito inteligente, conseguiu convencer o vilão a parar de fazer maldades e viveram felizes para sempre");
+                    return;
+                }
+                System.out.println(hero.getName() + " falhou em enganar o vilao e recebeu 2 pontos de dano");
+                hero.setHealth(hero.getHealth() - 2);
+                System.out.println("Em seguida, " + hero.getName() + " tentou bater no vilao.");
+                if (hero.getStrength() > 10) {
+                    System.out.println("Destruiu o vilao em pedacinhos com um unico soco e agora vive feliz para sempre");
+                    return;
+                }
+                System.out.println(hero.getName() + " falhou em bater no vilao e recebeu 2 pontos de dano");
+                hero.setHealth(hero.getHealth() - 2);
+                System.out.println(hero.getName() + " entao tenta usar um de seus equipamentos");
+                if (hero.getEquipamento1().compareTo("Bomba incendiaria") == 0 || hero.getEquipamento2().compareTo("Bomba incendiaria") == 0) {
+                    System.out.println("Tira de sua mochila uma Bomba incendiaria e queima o lorde das trevas, derrotando-o e vivendo feliz para sempre");
+                    return;
+                }
+                System.out.println(hero.getName() + " ficou parado pois nao tinha nada de importante em sua bolsa e recebeu 2 pontos de dano");
+                hero.setHealth(hero.getHealth() - 2);
+                System.out.println(hero.getName() + " entao pensa se poderia ter feito algo diferente para ganhar a luta");
+                System.out.println(hero.getName() + " lembra-se que esta em um jogo em que apenas 3 estrategias funcionam para derrotar o vilao por preguica do desenvolvedor");
+                System.out.println("Entao " + hero.getName() + "vai repetir as mesmas acoes, sabendo de sua derrota, mas esperando que no trabalho final de POO2 o desenvolvedor faca um jogo melhor");
+        }
+            System.out.println(hero.getName() + " Morreu pois seus pontos de vida chegaram a 0");
+        }
+        else System.out.println("Crie um heroi antes de enfrentar o Lorde Malvado");
+    }
     @Override
     public void reset() {
         hero = new Hero();
@@ -152,16 +187,23 @@ public class Director implements Builder{
 
     @Override
     public void stepClass(String classe) {
-
+        hero.setClasse(classe);
     }
 
     @Override
     public void stepStats(int strength, int speed, int inteligence, int senses, int dexterity, int adaptability, int health) {
-
+        hero.setStrength(strength);
+        hero.setSpeed(speed);
+        hero.setInteligence(inteligence);
+        hero.setSenses(senses);
+        hero.setDexterity(dexterity);
+        hero.setAdaptability(adaptability);
+        hero.setHealth(health);
     }
 
     @Override
     public void stepEquip(String equipamento1, String equipamento2) {
-
+        hero.setEquipamento1(equipamento1);
+        hero.setEquipamento2(equipamento2);
     }
 }

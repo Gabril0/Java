@@ -98,4 +98,19 @@ public class Hero {
     public void setHealth(int health) {
         this.health = health;
     }
+
+    @Override
+    public String toString() {
+        return  "Nome = " + name + '\n' +
+                "Classe = " + classe + '\n' +
+                "Equipamento 1 = " + equipamento1 + '\n' +
+                "Equipamento 2 = " + equipamento2 + '\n' +
+                "Forca = " + strength + '\n' +
+                "Velocidade = " + speed + '\n' +
+                "Inteligencia = " + inteligence + '\n' +
+                "Sentidos = " + senses + '\n' +
+                "Destreza = " + dexterity + '\n' +
+                "Adaptabilidade = " + adaptability + '\n' +
+                "Vida = " + health + '\n';
+    }
 }
