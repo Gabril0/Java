@@ -169,7 +169,7 @@ public class Director implements Builder{
                 hero.setHealth(hero.getHealth() - 2);
                 System.out.println(hero.getName() + " entao pensa se poderia ter feito algo diferente para ganhar a luta");
                 System.out.println(hero.getName() + " lembra-se que esta em um jogo em que apenas 3 estrategias funcionam para derrotar o vilao por preguica do desenvolvedor");
-                System.out.println("Entao " + hero.getName() + "vai repetir as mesmas acoes, sabendo de sua derrota, mas esperando que no trabalho final de POO2 o desenvolvedor faca um jogo melhor");
+                System.out.println("Entao " + hero.getName() + " vai repetir as mesmas acoes, sabendo de sua derrota, mas esperando que no trabalho final de POO2 o desenvolvedor faca um jogo melhor");
         }
             System.out.println(hero.getName() + " Morreu pois seus pontos de vida chegaram a 0");
         }
