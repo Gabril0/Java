@@ -13,7 +13,8 @@ public class PrevisaoTempo implements Observavel {
     @Override
     public void update() {
         try {
-            wait(5);
+            System.out.println("\nColetando dados...");
+            Thread.sleep(5000);
             temperatura = -20 + r.nextInt(70); // coloquei para ir de -20ºC ate 50 ºC
             umidade = r.nextInt(100);
             chuva = r.nextInt(100); // todos com 100 estao relacionados a porcentagem
@@ -28,6 +29,10 @@ public class PrevisaoTempo implements Observavel {
         while (true) {
 
             update();
+            System.out.println("Dados: Temperatura: " + temperatura + "\n"
+            + "Umidade: " + umidade + "\n"
+            + "Chuva: " + chuva + "\n"
+            + "Velocidade do vento: " + velocidadeVento + "\n");
 
             for (Observadores ob : observadores) {
                 ob.onAlteracao(this);
@@ -47,7 +52,7 @@ public class PrevisaoTempo implements Observavel {
 
     public void verObservadoresAtivos() {
         for (Observadores printList : observadores) {
-            printList.toString();
+            System.out.println(printList.toString()); 
 
         }
     }
